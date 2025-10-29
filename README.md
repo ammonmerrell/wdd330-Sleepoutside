@@ -4,6 +4,7 @@
 ### ⛺ SleepOutside Starter Code
 
  - This repository is the start of the SleepOutside web application project for WDD 330. The repository contains branches which are checkpoints for the team and individual assignments throughout the course.
+ (the url for this website is: exquisite-taiyaki-0511d5.netlify.app)
 
  - https://byui-cse.github.io/wdd330-ww-course/week01/team.html
 
