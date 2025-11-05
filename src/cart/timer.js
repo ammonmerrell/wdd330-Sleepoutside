@@ -1,4 +1,4 @@
-const ab = document.getElementById("countdown");
+const countd = document.getElementById("countdown");
 const timer = document.getElementById("startButton");
 
 
