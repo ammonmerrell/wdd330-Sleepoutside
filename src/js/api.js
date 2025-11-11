@@ -1,18 +1,25 @@
-const todo = document.getElementById('todo-output');
+const list = document.querySelector(".unList")
 
-async function getTodo() {
+async function getUsers() {
     try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/77');
+        const response = await fetch("https://jsonplaceholder.typicode.com/users/1");
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`HTTP Error! Status: ${response.status}`);
         }
         const json = await response.json();
-        todo.textContent = json;
-    } catch (error) {
-        console.error('There was a problem fetching the data:', error);
-    }
-}
+        list.innerHTML = json.name
 
-todo.textContent = 'Loading...';
-getTodo();
-// todo.textContent = `todo: ${todo.id}`
+        let name = document.createElement("li");
+        let email = document.createElement("li");
+        name.innerHTML = `name: ${json.name} email: ${json.email}`;
+        email.innerHTML = `name: ${json.name} email: ${json.email}`;
+        list.appendChild(name);
+        list.appendChild(email);
+
+    } catch (error) {
+        console.error("there was a probolem fetching the data: ", error);
+    }
+    console.log(response)
+}
+list.textContent = "loading...";
+getUsers();
