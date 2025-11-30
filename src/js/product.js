@@ -1,6 +1,7 @@
 import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 
+const baseURL = import.meta.env.VITE_SERVER_URL
 const dataSource = new ProductData("tents");
 
 function addProductToCart(product) {
